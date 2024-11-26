@@ -1,0 +1,180 @@
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 15px;
+  width: 50%;
+}
+.form__field {
+  font-family: inherit;
+  width: 200%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.1rem;
+  color: #000;
+  padding: 8px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1rem;
+    cursor: text;
+    top: 30px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #252726;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 0.9rem;
+    color: #252726;
+    font-weight:700;    
+  }
+  padding-bottom: 6px;  
+  font-weight: 400;
+  border-width: 3px;
+  border-image: #000;
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+/* demo */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-form-item{
+  margin-bottom: 12px;
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-input-outlined{
+  border-color: rgb(120, 120, 120);
+}
+:where(.css-dev-only-do-not-override-qnu6hi).ant-input-outlined:hover{
+  border-color: rgb(50,50,50);
+}
+:where(.css-dev-only-do-not-override-qnu6hi).ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector{
+  border-color: rgb(120, 120, 120);
+}
+:where(.css-dev-only-do-not-override-qnu6hi).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector{
+  border-color: rgb(50,50,50);
+}
+
+.ant-select-selector:focus-within {
+  border-color: rgb(50,50,50) !important;
+  box-shadow: none !important;
+}
+.email-input:focus{
+  border-color: rgb(50,50,50) !important;
+  box-shadow: none !important;
+}
+
+/* Style the checkbox when checked */
+.ant-checkbox-checked .ant-checkbox-inner {
+  border-color: rgb(50,50,50) !important;
+  box-shadow: none !important;
+}
+
+/* Change the checkbox border color when it's hovered */
+.ant-checkbox:hover .ant-checkbox-inner {
+  border-color: rgb(50,50,50) !important;
+  box-shadow: none !important;}
+
+/* Change the checkbox border color when focused */
+.ant-checkbox-input:focus + .ant-checkbox-inner {
+  border-color: rgb(50,50,50) !important;
+  box-shadow: none !important;
+}
+:where(.css-dev-only-do-not-override-qnu6hi).ant-checkbox-wrapper:not(.ant-checkbox-wrapper-disabled):hover .ant-checkbox-checked:not(.ant-checkbox-disabled) .ant-checkbox-inner{
+  background-color: rgb(50,50,50);
+}
+:where(.css-dev-only-do-not-override-qnu6hi).ant-checkbox-checked .ant-checkbox-inner{
+  background-color: rgb(50,50,50);
+}
+.custom-checkbox .ant-checkbox-inner {
+  width: 20px; 
+  height: 20px; 
+}
+.custom-checkbox .ant-checkbox-inner::after {
+  width: 7px; 
+  height: 12px; 
+}
+:where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected{
+  color: rgb(51,51,51);
+}
+:where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light .ant-menu-item, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu .ant-menu-item, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light .ant-menu-submenu-title, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu .ant-menu-submenu-title{
+  color: rgb(110, 109, 118);
+}
+:where(.css-dev-only-do-not-override-qnu6hi).ant-menu{
+  font-size: 15px;
+  font-weight: 600;
+}
+:where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover{
+  color: rgb(51,51,51);
+  border-bottom-color: rgb(51,51,51);
+}
+:where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected::after, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected::after, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected::after, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected::after{
+  color: rgb(51,51,51);
+}
+.ant-menu-item:hover::after, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover::after, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu:hover::after, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover::after, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light.ant-menu-horizontal >.ant-menu-item-active::after, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-active::after, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-active::after, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active::after, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light.ant-menu-horizontal >.ant-menu-item-open::after, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-open::after, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-open::after, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open::after{
+  border-bottom-color: rgb(51,51,51);
+}
+.change-btn{
+  font-size: 13px;
+  font-weight: 600;
+  color: rgb(107, 107, 107);
+}
+.change-btn:hover{
+  color: #000;
+  cursor: pointer;
+}
+:where(.css-dev-only-do-not-override-qnu6hi).ant-form-item .ant-form-item-explain, :where(.css-dev-only-do-not-override-qnu6hi).ant-form-item .ant-form-item-extra{
+  font-size: 12px;
+}
+.ant-menu-item-selected::after, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected::after, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected::after, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected::after{
+  border-bottom-color: rgb(51,51,51);
+}
+:where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover, :where(.css-dev-only-do-not-override-qnu6hi).ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) >.ant-menu-submenu-title:hover{
+  border-bottom-color: rgb(51,51,51);
+}
+:where(.css-dev-only-do-not-override-qnu6hi).ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover{
+  color: #fff;
+  background-color: #424649;
+  border-color: #373b3e;
+}
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: rgb(230, 230, 230);
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: -webkit-linear-gradient(to top left, rgba(205, 156, 242, 1), rgba(246, 243, 255, 1));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background: linear-gradient(to top left, rgba(205, 156, 242, 1), rgba(246, 243, 255, 1)) */
+}
